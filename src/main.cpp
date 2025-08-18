@@ -1,15 +1,17 @@
 #include <Arduino.h>
-#include <Blink.h>
+#include <Switch.h>
 
-const int LED_PIN = 8;
-const int DELAY_BLINK = 1000;
+const int SWITCH_PIN = 8;
+const int LED_ON_PIN = 9;
+const int LED_OFF_PIN = 10;
+
 
 void setup() {
-    initBlink(LED_PIN);
+    initSwitch(SWITCH_PIN, LED_ON_PIN, LED_OFF_PIN);
 }
 
 
 void loop() {
-  doBlink(LED_PIN, DELAY_BLINK);
+  doSwitch(SWITCH_PIN, LED_ON_PIN, LED_OFF_PIN);
 }
 
